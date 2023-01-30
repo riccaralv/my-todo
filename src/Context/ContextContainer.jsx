@@ -60,10 +60,10 @@ const ContextContainer = (props) => {
   // Ahora vamos a gestionar que no se pierdan los datos o los cambios una vez que refresquemos la página
   useEffect(() => {
     const tasks = JSON.parse(localStorage.getItem('todos'));
-    // if (tasks) {
-    //   setItems(tasks);
-    dispatch({ type: 'ONLOAD' });
-    // }
+    if (tasks) {
+      //   setItems(tasks);
+      dispatch({ type: 'ONLOAD' });
+    }
   }, []);
 
   return (

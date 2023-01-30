@@ -61,3 +61,13 @@ Si ahora pico en "Visit site"
 
 - STEP 6: dentro de VSC, voy a index.js y en el tag <BrowserRouter> añado: basename={'/my-todo'}:
   <BrowserRouter basename={'/my-todo'}>
+
+- STEP 7: en la terminal escribo:
+  git add .
+  git commit -m "Add basename"
+  git push
+
+  Y una vez todo se haya actualizado, escribo:
+  npm run deploy
+
+  Cuando pase algo de tiempo, voy a my-todo (en github) y después a "Actions" y veré que
