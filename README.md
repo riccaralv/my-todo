@@ -44,3 +44,20 @@ INSTRUCTIONS: https://create-react-app.dev/docs/deployment/#github-pages
   git add .
   git commit -m "initial commit"
   git status
+
+- STEP 5: en GITHUB picamos en "new_repository" y elegimos el nombre (en este caso my-todo, es decir, el nombre que añadimos en la dirección que pusimos en la línea 2 del package.json).
+  Lo ponemos como público y le damos a "crear".
+  En la siguiente página que nos sale, copiamos los comandos de "... or push an existing repository from the command line".
+  Después, si refresco la página, el código debería aparecer en github.
+
+- STEP 6: de nuevo en la página en la que estaba al principio (create-react-app.dev) escribo:
+  npm run deploy
+
+Una vez hecho esto volvemos a refrescar la página de github y donde esta el botón "main", si lo despliego, veo que se ha creado branch llamada "gh-pages"
+
+Ahora voy a "Settings" y dentro de esto a "Pages" (a la izquierda) y refresco hasta que me aparezca arriba "Your site is live at https://riccaralv.github.io/my-todo
+
+Si ahora pico en "Visit site"
+
+- STEP 6: dentro de VSC, voy a index.js y en el tag <BrowserRouter> añado: basename={'/my-todo'}:
+  <BrowserRouter basename={'/my-todo'}>
