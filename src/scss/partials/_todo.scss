@@ -1,0 +1,51 @@
+@use "./variables" as *;
+
+.todones-container {
+    padding: 10px;
+
+    .todones-item {
+        padding: 5px 10px;
+        background: $inputBg;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p{
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }        
+}
+
+.todos-container {
+    padding: 10px;
+
+    .todo-form {
+        .input-item {
+            input {
+                padding: 5px 10px;
+                background: $inputBg;
+                margin-right: 10px;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                color: $mainTxt;
+                width: 300px;
+                border: none;
+            }
+        }
+    }
+
+    .todos-item {
+        padding: 5px 10px;
+        background: $inputBg;
+        margin: 10px 0;
+        border-radius: 50px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }        
+}

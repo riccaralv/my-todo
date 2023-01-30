@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## SASS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Queremos usar SASS, así que tenemos que instalarlo como una dependency. Para ello, tenemos que escribir en la terminal:
 
-## Available Scripts
+    npm i sass
 
-In the project directory, you can run:
+Una vez hecho, puedo comprobar en las dependecies (package.json file) que ha aparecido "sass".
 
-### `npm start`
+Una vez hecho esto, creamos un nuevo archivo 'App.scss' dentro de una nueva carpeta llamada 'scss' (en la carpeta 'src'). Después importamos este archivo en 'App.jsx'.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dentro de 'scss' vamos a crear otra carpeta ('partials') para guardar algunas variables (de color). Esta carpeta contendrá el archivo '\_variables.scss'. Por último tenemos que importar (desde 'App.scss') este archivo de variables. Para ello, incluimos lo siguiente en el archivo que lo va a recibir:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    @use "./partials/variables" as *;
 
-### `npm test`
+# RECORDATORIOS y NOTAS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Intentar no usar más de dos o tres colores en nuestra página.
+- No usar colores puros.
+- La extensión que usamos para que autocomplete es 'ES7 React/Redux/React-Native snippets'.
+- En este ejemplo tenemos que crear una lista de tareas y lo primero que se nos ha de venir a la cabeza cuando pensamos en una lista es la palabra "array". En este caso tendremos un 'array' de 'objects', puesto que no solo tendremos la tarea, sino también un tipo de identificador. Y esta combinación de 'array of objects' es la manera en la que construimos una base de datos.
+- Los id suelen (deben) ser alfanuméricos.
+-
 
-### `npm run build`
+# UPLOADING ONLINE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+INSTRUCTIONS: https://create-react-app.dev/docs/deployment/#github-pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- STEP 1: añado esto después de la línea 2 en package.json:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  "homepage": "http://riccaralv.github.io/my-todo",
 
-### `npm run eject`
+- STEP 2: en la terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  npm install --save gh-pages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- STEP 3: en el scripst de package.json copio:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- STEP 4: inicializamos un git repository:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  git init
+  git add .
+  git commit -m "initial commit"
+  git status

@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $navBg;
+    min-height: 60px;
+    padding: 10px;
+        a {
+        color: $mainTxt;
+        // text-decoration: none;
+        }
+    }
