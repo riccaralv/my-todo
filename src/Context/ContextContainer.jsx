@@ -21,8 +21,8 @@ const ContextContainer = (props) => {
   const [state, dispatch] = useReducer(reducer, tasks);
 
   // queremos filtrar 'tasks' en función de que la tarea esté o no hecha y así poder definir los que van a ser nuestros props
-  const toDos = this.state.first.filter((element) => !element.done);
-  const toDones = this.state.first.filter((element) => element.done);
+  const toDos = state.filter((element) => !element.done);
+  const toDones = state.filter((element) => element.done);
 
   // función añadir items desde form
   const addItem = (value) => {
